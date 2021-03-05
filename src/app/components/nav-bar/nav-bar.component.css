@@ -1,0 +1,27 @@
+#app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: rgb(51, 51, 51);
+    margin-top: 60px;
+  }
+  .btngrp button {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  .card-columns {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .primary-custom {
+    background-color: black !important;
+    color: white !important;
+  }
+  .warning-custom {
+    color: #eea600;
+  }
+  .fa-space-shuttle {
+    color: #FFC300;
+  }
