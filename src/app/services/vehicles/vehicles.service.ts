@@ -15,14 +15,14 @@ export class VehiclesService {
     console.log(`ContactService: ${message}`);
   }
 
-  getPeoples() :Observable<any>{
+  getVehicles() :Observable<any>{
     return this.http.get<Res>("https://swapi.dev/api/vehicles/")
       .pipe(
         catchError(this.handleError('erreur', []))
       );
   }
 
-  getFimDetails(url:string) :Observable<any>{
+  getVehicleDetails(url:string) :Observable<any>{
     return this.http.get<Res>(url)
       .pipe(
         catchError(this.handleError('erreur', []))

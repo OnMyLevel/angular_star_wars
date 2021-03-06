@@ -1,23 +1,14 @@
 <p>pilote works!</p>
 <p *ngIf="pilote">{{pilote.name}}</p>
-<h4 class="text-ellipsis">
+<h4 *ngIf="filmsUrl" class="text-ellipsis">
   
-    <ul class="col-sm-3" *ngFor="let pilote of pilotesUrl; let i = index">
-      <a routerLink="/film/{{id}}" title="{{vaisseau.name}}" routerLinkActive="active" >Pilote - {{i}}</a>
+  <ul class="col-sm-3" *ngFor="let film of filmsUrl; let i = index">
+      <a routerLink="/film/{{id}}" t routerLinkActive="active" > Film Numero - {{i}}</a>
    </ul>
+
+   <ul class="col-sm-3" *ngFor="let startships of starshipsUrl; let i = index">
+    <a routerLink="/startships/{{id}}"  routerLinkActive="active" > Vaisseau Numéro - {{i}}</a>
+ </ul>
   
-  </h4>
-  <h4 class="text-ellipsis">
-  
-    <ul class="col-sm-3" *ngFor="let pilote of pilotesUrl; let i = index">
-      <a routerLink="/species/{{id}}" title="{{vaisseau.name}}" routerLinkActive="active" >Pilote - {{i}}</a>
-   </ul>
-  
-  </h4>
-  <h4 class="text-ellipsis">
-  
-    <ul class="col-sm-3" *ngFor="let pilote of pilotesUrl; let i = index">
-      <a routerLink="/vehicules/{{id}}" title="{{vaisseau.name}}" routerLinkActive="active" >Pilote - {{i}}</a>
-   </ul>
-  
-  </h4>
+</h4>
+ 

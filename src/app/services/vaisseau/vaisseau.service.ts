@@ -30,8 +30,8 @@ export class VaisseauService {
       );
   }
 
-  getVaisseauDetailsUrl(id:string) :Observable<any>{
-    return this.http.get<Res>(id)
+  getVaisseauDetailsUrl(url:string) :Observable<any>{
+    return this.http.get<Res>(url)
       .pipe(
         catchError(this.handleError('erreur', []))
       );
