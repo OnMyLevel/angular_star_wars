@@ -12,6 +12,11 @@ import { ContainerComponent } from './components/container/container.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FileHandlerComponent } from './components/file-handler/file-handler.component';
+import { VaisseauxComponent } from './pages/vaisseaux/vaisseaux.component';
+import { PiloteComponent } from './pages/pilote/pilote.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { VaisseauCardComponent } from './components/vaisseau-card/vaisseau-card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -20,10 +25,15 @@ import { FileHandlerComponent } from './components/file-handler/file-handler.com
     NavBarComponent,
     FooterComponent,
     ContainerComponent,
-    FileHandlerComponent
+    FileHandlerComponent,
+    VaisseauxComponent,
+    PiloteComponent,
+    VaisseauCardComponent,
   ],
   imports: [
     BrowserModule,
+    NgxPaginationModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),

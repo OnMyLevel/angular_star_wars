@@ -1,0 +1,27 @@
+<p  *ngIf="vaisseau" >{{vaisseau.name}}</p>
+<h4 class="text-ellipsis">
+  
+  <ul class="col-sm-3" *ngFor="let pilote of pilotesUrl; let i = index">
+    <a routerLink="/piloteDetails/{{id}}" title="{{vaisseau.name}}" routerLinkActive="active" >Pilote - {{i}}</a>
+ </ul>
+
+</h4>
+
+<!-- <div class="thumbnail">
+    <img *ngIf="movie.poster_path" src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" routerLink="/movie/{{movie.id}}" >
+    <img *ngIf="!movie.poster_path" src="../../../assets/abstract-image.jpg" routerLink="/movie/{{movie.id}}" >
+    <div class="caption">
+      <h4 class="text-ellipsis">
+        <a routerLink="/movie/{{movie.id}}" title="{{movie.title}}">{{movie.title}}</a>
+      </h4>
+      <p><strong>Date de parution: </strong>{{movie.release_date}}</p>
+      <p>
+        <a routerLink="/movie/{{movie.id}}">Détails &raquo;</a>
+        <small class="label label-success pull-right" *ngIf="movie.vote_average">
+          {{movie.vote_average}}
+          <i class="glyphicon glyphicon-star"></i>
+        </small>
+      </p>
+    </div>
+  </div> -->
+  
