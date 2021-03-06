@@ -7,7 +7,7 @@ import { Res } from 'src/app/models/res';
 @Injectable({
   providedIn: 'root'
 })
-export class PeopleService {
+export class SpeciesService {
 
   constructor(private http: HttpClient ){ }
 
@@ -16,13 +16,13 @@ export class PeopleService {
   }
 
   getPeoples() :Observable<any>{
-    return this.http.get<Res>("https://swapi.dev/api/peoples/")
+    return this.http.get<Res>("https://swapi.dev/api/species/")
       .pipe(
         catchError(this.handleError('erreur', []))
       );
   }
 
-  getPeopleDetails(url:string) :Observable<any>{
+  getFimDetails(url:string) :Observable<any>{
     return this.http.get<Res>(url)
       .pipe(
         catchError(this.handleError('erreur', []))
@@ -35,7 +35,7 @@ export class PeopleService {
       console.error(error);
 
       // TODO: better job of transforming error for user consumption
-      PeopleService.log(`${operation} failed: ${error.message}`);
+      SpeciesService.log(`${operation} failed: ${error.message}`);
 
       // Let the app keep running by returning an empty result.
       return of (result as T);

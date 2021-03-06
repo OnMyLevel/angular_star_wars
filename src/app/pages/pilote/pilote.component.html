@@ -1,2 +1,23 @@
 <p>pilote works!</p>
 <p *ngIf="pilote">{{pilote.name}}</p>
+<h4 class="text-ellipsis">
+  
+    <ul class="col-sm-3" *ngFor="let pilote of pilotesUrl; let i = index">
+      <a routerLink="/film/{{id}}" title="{{vaisseau.name}}" routerLinkActive="active" >Pilote - {{i}}</a>
+   </ul>
+  
+  </h4>
+  <h4 class="text-ellipsis">
+  
+    <ul class="col-sm-3" *ngFor="let pilote of pilotesUrl; let i = index">
+      <a routerLink="/species/{{id}}" title="{{vaisseau.name}}" routerLinkActive="active" >Pilote - {{i}}</a>
+   </ul>
+  
+  </h4>
+  <h4 class="text-ellipsis">
+  
+    <ul class="col-sm-3" *ngFor="let pilote of pilotesUrl; let i = index">
+      <a routerLink="/vehicules/{{id}}" title="{{vaisseau.name}}" routerLinkActive="active" >Pilote - {{i}}</a>
+   </ul>
+  
+  </h4>

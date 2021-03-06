@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { People } from 'src/app/models/people';
 import { Vaisseau } from 'src/app/models/vaisseau';
-import { PeopleService } from 'src/app/services/people/people.service';
+import { PeoplesService } from 'src/app/services/peoples/peoples.service';
 
 @Component({
   selector: 'app-vaisseau-card',
@@ -19,7 +19,7 @@ export class VaisseauCardComponent implements OnInit {
   pilotes: People[];
   pilotesUrl: [];
 
-  constructor( private _peopleService:  PeopleService,) { 
+  constructor( private _peopleService:  PeoplesService,) { 
   }
 
   ngOnInit(): void {
