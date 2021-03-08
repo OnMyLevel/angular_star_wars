@@ -1,29 +1,22 @@
+<div class="col-md-12">
+  <!-- Champ de recherche  -->
+  <div class="input-group">
+    <input class="form-control py-2 border-right-0 border" placeholder="Rechercher de Vaisseau "type="search" >
+    <span class="input-group-append">
+      <div class="input-group-text"><i class="fa fa-search"></i></div>
+    </span>
+    <div class="inline pull-right btngrp" style="inline-flex">
+      <button (click)="searchMethod()" type="button" class="btn btn-warning"> Rechercher</button>
+    </div>
+  </div>
+</div>
+<br>
 <div class="row">
-    <!--<app-category [searchType]="searchType" ></app-category>-->
       <div class="col-xs-12 col-sm-8 col-md-9 col-lg-10">      
-      <!--<app-search [searchType]="searchType" (changeMovies)="searchMovies($event)"></app-search>-->
-      <!--<div *ngIf="searchRes">
-        <h3 class="orange-text">Résultats de la recherche</h3>
-        <div class="row is-flex">
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xs-6" *ngFor="let movie of searchRes | paginate: { itemsPerPage: 8, currentPage: p }; let i = index;">
-            <movie-card [movie]="movie"></movie-card>
-          </div>
-        </div>
-        <pagination-controls *ngIf="searchRes.length>8" (pageChange)="p = $event"></pagination-controls>
-      </div>-->
-
-      <!--<h3 *ngIf="!searchRes" class="orange-text">Films les mieux notés</h3>
-      <div *ngIf="!searchRes" class="row is-flex">
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xs-6" *ngFor="let movie of topRatedList | paginate: { itemsPerPage: 4, currentPage: p }; let i = index;">
-          <movie-card [movie]="movie"></movie-card>
-        </div>
-        <pagination-controls (pageChange)="p = $event"></pagination-controls>
-      </div>-->
       <div *ngIf="vaisseauList" class="row is-flex">
         <div class="col-sm-3" *ngFor="let vaisseau of vaisseauList; let i = index">
           <app-vaisseau-card [id]="i" [vaisseau]="vaisseau"></app-vaisseau-card>
         </div>
-        <!--<pagination-controls (pageChange)="p = $event" previousLabel="Précédent" nextLabel="Suivant"></pagination-controls>-->
       </div>
     </div>
 </div>

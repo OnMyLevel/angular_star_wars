@@ -29,4 +29,8 @@ export class VaisseauxComponent implements OnInit {
   ngOnInit() {
     console.log(this.vaisseauList)
   }
+
+  public searchMethod(){
+    
+  }
 }

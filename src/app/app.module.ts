@@ -13,10 +13,10 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FileHandlerComponent } from './components/file-handler/file-handler.component';
 import { VaisseauxComponent } from './pages/vaisseaux/vaisseaux.component';
-import { PiloteComponent } from './pages/pilote/pilote.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { VaisseauCardComponent } from './components/vaisseau-card/vaisseau-card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PiloteComponent } from './pages/pilote/pilote.component';
 
 
 @NgModule({
