@@ -1,4 +1,4 @@
-export class Species {
+export class Specie {
     name: string; // The name of this species.
     classification: string; // The classification of this species, such as "mammal" or "reptile".
     designation: string; // The designation of this species, such as "sentient".

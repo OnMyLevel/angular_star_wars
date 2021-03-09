@@ -15,14 +15,14 @@ export class PlanetsService {
     console.log(`ContactService: ${message}`);
   }
 
-  getPeoples() :Observable<any>{
+  getPlanets() :Observable<any>{
     return this.http.get<Res>("https://swapi.dev/api/planets/")
       .pipe(
         catchError(this.handleError('erreur', []))
       );
   }
 
-  getFimDetails(url:string) :Observable<any>{
+  getPlanetDetails(url:string) :Observable<any>{
     return this.http.get<Res>(url)
       .pipe(
         catchError(this.handleError('erreur', []))

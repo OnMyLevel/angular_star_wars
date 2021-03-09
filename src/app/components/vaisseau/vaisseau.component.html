@@ -1,1 +1,13 @@
 <p>vaisseau works!</p>
+<h1 *ngIf="vaisseau">{{vaisseau.name}}</h1>
+
+<h4 *ngIf="filmsUrl" class="text-ellipsis">
+    <ul class="col-sm-3" *ngFor="let filmId of filmsUrl; let i = index">
+        <a routerLink="/film/{{filmId}}" t routerLinkActive="active" > Film Numéro - {{filmId}}</a>
+     </ul>
+  </h4>
+  <h4 *ngIf="peoplesUrl" class="text-ellipsis">
+     <ul class="col-sm-3" *ngFor="let peopleId of peoplesUrl; let i = index">
+        <a routerLink="/people/{{peopleId}}"  routerLinkActive="active" > People number - {{peopleId}}</a>
+     </ul>
+  </h4>

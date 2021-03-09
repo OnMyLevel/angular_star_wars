@@ -1,2 +1,32 @@
 <p>film works!</p>
-<h1>{{film.title}}</h1>
+<h1 *ngIf="film">{{film.title}}</h1>
+
+<!--<h4 *ngIf="peoplesUrl" class="text-ellipsis">
+    <ul class="col-sm-3" *ngFor="let peopleId of peoplesUrl; let i = index">
+        <a routerLink="/people/{{peopleId}}" routerLinkActive="active" > People Numero - {{peopleId}}</a>
+     </ul>
+  </h4>-->
+  <!--<h4 *ngIf="starshipsUrl" class="text-ellipsis">
+     <ul class="col-sm-3" *ngFor="let startshipId of starshipsUrl; let i = index">
+        <a routerLink="/vaisseau/{{startshipId}}"  routerLinkActive="active" > Vaisseau Numéro - {{startshipId}}</a>
+     </ul>
+  </h4>-->
+
+  <!--<h4 *ngIf="vehiclesUrl" class="text-ellipsis">
+    <ul class="col-sm-3" *ngFor="let vehicleId of vehiclesUrl; let i = index">
+       <a routerLink="/vehicle/{{vehicleId}}"  routerLinkActive="active" > Véhicule Numéro - {{vehicleId}}</a>
+    </ul>
+ </h4>-->
+
+ <h4 *ngIf="speciesUrl" class="text-ellipsis">
+   <ul class="col-sm-3" *ngFor="let specieId of speciesUrl; let i = index">
+      <a routerLink="/specie/{{specieId}}"  routerLinkActive="active" > Species Number - {{specieId}}</a>
+   </ul>
+</h4>
+
+<h4 *ngIf="planetsUrl" class="text-ellipsis">
+   <ul class="col-sm-3" *ngFor="let planetId of planetsUrl; let i = index">
+      <a routerLink="/planet/{{planetId}}"  routerLinkActive="active" > Planet Number - {{specieId}}</a>
+   </ul>
+</h4>
+

@@ -2,9 +2,9 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Film } from 'src/app/models/film';
 import { People } from 'src/app/models/people';
-import { Species } from 'src/app/models/species';
+import { Specie } from 'src/app/models/specie';
 import { Vaisseau } from 'src/app/models/vaisseau';
-import { Vehicles } from 'src/app/models/vehicles';
+import { Vehicle } from 'src/app/models/vehicle';
 import { FilmsService } from 'src/app/services/films/films.service';
 import { PeoplesService } from 'src/app/services/peoples/peoples.service';
 import { SpeciesService } from 'src/app/services/species/species.service';
@@ -19,24 +19,18 @@ import { VehiclesService } from 'src/app/services/vehicles/vehicles.service';
 export class PiloteComponent implements OnInit {
 
   pilote : People;
-  filmsUrl: string[];
-
+  filmsUrl: [];
   starshipsUrl: [];
   vehiclesUrl: [];
   speciesUrl: [];
 
 
   constructor(private _peopleService: PeoplesService,
-    private router: ActivatedRoute,
-    private _filmsService : FilmsService,
-    private _vaisseauService : VaisseauService,
-    private _speciesService : SpeciesService,
-    private _vehiclesService: VehiclesService
-    ) { 
-    }
+    private router: ActivatedRoute
+    ) { }
 
   ngOnInit(): void {
-    console.log("pilote component");
+    console.log("People component");
     this.router.params.subscribe((params) => {
       const id = params['id'];
       this._peopleService.getPeopleDetails("https://swapi.dev/api/people/"+id+"/").subscribe(res => {
@@ -55,11 +49,10 @@ export class PiloteComponent implements OnInit {
           this.recupereIdUrl(this.starshipsUrl)
         }
         
-       /* if(this.vehiclesUrl.length > 0){
-          console.log(this.starshipsUrl);
-          this.getVehicles();
-        }*/
-        
+       if(this.vehiclesUrl.length > 0){
+          console.log(this.vehiclesUrl);
+          this.recupereIdUrl(this.vehiclesUrl);
+        }
       });
     });
   }
@@ -68,8 +61,11 @@ export class PiloteComponent implements OnInit {
     console.log(tabString);
       for(let i = 0; i< tabString.length; i++){
         let tmp =  tabString[i]; 
-        console.log(tmp)  ;
+        console.log(tmp);
         tabString[i] = tmp[tmp.length-2];
+        if(tmp[tmp.length-3] !== "/"){
+          tabString[i] = tmp[tmp.length-3]+tabString[i];
+        }
         console.log(tabString[i]);
       }   
   }

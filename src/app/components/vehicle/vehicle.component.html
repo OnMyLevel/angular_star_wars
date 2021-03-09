@@ -1,1 +1,14 @@
 <p>vehicle works!</p>
+<p *ngIf="vehicle">{{vehicle.name}}</p>
+
+<h4 *ngIf="filmsUrl" class="text-ellipsis">
+  <ul class="col-sm-3" *ngFor="let filmId of filmsUrl; let i = index">
+      <a routerLink="/film/{{filmId}}" t routerLinkActive="active" > Film Numéro - {{filmId}}</a>
+   </ul>
+</h4>
+<h4 *ngIf="pilotesUrl" class="text-ellipsis">
+   <ul class="col-sm-3" *ngFor="let piloteId of pilotesUrl; let i = index">
+      <a routerLink="/people/{{piloteId}}"  routerLinkActive="active" > Pilote Numéro - {{peopleId}}</a>
+   </ul>
+</h4>
+ 
