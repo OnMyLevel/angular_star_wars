@@ -16,6 +16,7 @@ const routes: Routes = [
     { path: 'vehicle/:id', component: VehicleComponent},
     { path: 'specie/:id', component: SpecieComponent},
     { path: 'planet/:id', component: PlanetComponent},
+    { path: 'starshipsList/', component: VaisseauxComponent},
 ];
 
 @NgModule({
