@@ -1,14 +1,20 @@
-<p>vehicle works!</p>
-<p *ngIf="vehicle">{{vehicle.name}}</p>
-
-<h4 *ngIf="filmsUrl" class="text-ellipsis">
-  <ul class="col-sm-3" *ngFor="let filmId of filmsUrl; let i = index">
-      <a routerLink="/film/{{filmId}}" t routerLinkActive="active" > Film Numéro - {{filmId}}</a>
-   </ul>
-</h4>
-<h4 *ngIf="pilotesUrl" class="text-ellipsis">
-   <ul class="col-sm-3" *ngFor="let piloteId of pilotesUrl; let i = index">
-      <a routerLink="/people/{{piloteId}}"  routerLinkActive="active" > Pilote Numéro - {{peopleId}}</a>
-   </ul>
-</h4>
+ <div class="card">
+   <div class="card-body">
+     <h5 class="card-title">{{vehicle.name}}</h5>
+     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+   </div>
+   <img class="card-img-bottom" src="../../../assets/images/vehicle.jpg" alt="Card image cap">
+   <h4 *ngIf="filmsUrl" class="text-ellipsis">
+      <ul class="col-sm-3" *ngFor="let filmId of filmsUrl; let i = index">
+          <a routerLink="/film/{{filmId}}" t routerLinkActive="active" > F-{{filmId}}</a>
+       </ul>
+    </h4>
+    <br>
+    <h4 *ngIf="pilotesUrl" class="text-ellipsis">
+       <ul class="col-sm-3" *ngFor="let piloteId of pilotesUrl; let i = index">
+          <a routerLink="/people/{{piloteId}}"  routerLinkActive="active" > P-{{piloteId}}</a>
+       </ul>
+    </h4>
+ </div>
  

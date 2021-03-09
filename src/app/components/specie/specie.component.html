@@ -1,14 +1,19 @@
-<p>specie works!</p>
-<p *ngIf="specie">{{specie.name}}</p>
-
-<h4 *ngIf="filmsUrl" class="text-ellipsis">
-  <ul class="col-sm-3" *ngFor="let filmId of filmsUrl; let i = index">
-      <a routerLink="/film/{{filmId}}" t routerLinkActive="active" > Film Numéro - {{filmId}}</a>
-   </ul>
-</h4>
-<h4 *ngIf="peoplesUrl" class="text-ellipsis">
-   <ul class="col-sm-3" *ngFor="let peopleId of peoplesUrl; let i = index">
-      <a routerLink="/people/{{peopleId}}"  routerLinkActive="active" > People number - {{peopleId}}</a>
-   </ul>
-</h4>
+<div class="card">
+   <h5 class="card-header">{{specie.name}}</h5>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <h4 *ngIf="filmsUrl" class="text-ellipsis">
+      <ul class="col-sm-3" *ngFor="let filmId of filmsUrl; let i = index">
+          <a routerLink="/film/{{filmId}}" t routerLinkActive="active" > F-{{filmId}}</a>
+       </ul>
+    </h4>
+    <br>
+    <h4 *ngIf="peoplesUrl" class="text-ellipsis">
+       <ul class="col-sm-3" *ngFor="let peopleId of peoplesUrl; let i = index">
+          <a routerLink="/people/{{peopleId}}"  routerLinkActive="active" > P-{{peopleId}}</a>
+       </ul>
+    </h4>
+   </div>
+ </div>
  

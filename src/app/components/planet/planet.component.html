@@ -1,13 +1,19 @@
-<p>planet works!</p>
-<p *ngIf="planet">{{planet.name}}</p>
-
-<h4 *ngIf="filmsUrl" class="text-ellipsis">
-  <ul class="col-sm-3" *ngFor="let filmId of filmsUrl; let i = index">
-      <a routerLink="/film/{{filmId}}" t routerLinkActive="active" > Film Numéro - {{filmId}}</a>
-   </ul>
-</h4>
-<h4 *ngIf="residentsUrl" class="text-ellipsis">
-   <ul class="col-sm-3" *ngFor="let residentId of residentsUrl; let i = index">
-      <a routerLink="/people/{{residentId }}"  routerLinkActive="active" > Residents number - {{residentId }}</a>
-   </ul>
-</h4>
+<div class="card bg-dark text-white">
+   <img class="card-img" src="../../../assets/images/planet.png" alt="Card image">
+   <div class="card-img-overlay">
+     <h5 class="card-title">{{planet.name}}</h5>
+     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+     <p class="card-text">Last updated 3 mins ago</p>
+     <h4 *ngIf="residentsUrl" class="text-ellipsis">
+      <ul class="col-sm-3" *ngFor="let residentId of residentsUrl; let i = index">
+         <a routerLink="/people/{{residentId }}"  routerLinkActive="active" > R-{{residentId }}</a>
+      </ul>
+   </h4>
+   <br>
+   <h4 *ngIf="filmsUrl" class="text-ellipsis">
+      <ul class="col-sm-3" *ngFor="let filmId of filmsUrl; let i = index">
+          <a routerLink="/film/{{filmId}}"  routerLinkActive="active" > F-{{filmId}}</a>
+       </ul>
+    </h4>
+   </div>
+ </div>

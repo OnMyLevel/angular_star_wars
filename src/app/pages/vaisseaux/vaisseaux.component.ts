@@ -9,15 +9,6 @@ import { VaisseauService } from 'src/app/services/vaisseau/vaisseau.service';
 export class VaisseauxComponent implements OnInit {
   @Output()
   vaisseauList: [];
-  pilotesList: [];
-  films:[]
-  searchRes: Array<Object>;
-  searchStr: string;
-
-  @Output() 
-  searchType:number=1;
-  p: number = 1;
-
   constructor(private _vaisseauService: VaisseauService) { 
 
     this._vaisseauService.getVaisseaux().subscribe(res => {

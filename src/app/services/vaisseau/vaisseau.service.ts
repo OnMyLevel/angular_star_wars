@@ -9,6 +9,9 @@ import { of } from 'rxjs';
   providedIn: 'root'
 })
 export class VaisseauService {
+  getFilmDetails(arg0: never) {
+    throw new Error('Method not implemented.');
+  }
 
   constructor(private http: HttpClient ){ }
 

@@ -1,14 +1,21 @@
-<p>pilote works!</p>
-<p *ngIf="pilote">{{pilote.name}}</p>
-
-<h4 *ngIf="filmsUrl" class="text-ellipsis">
-  <ul class="col-sm-3" *ngFor="let filmId of filmsUrl; let i = index">
-      <a routerLink="/film/{{filmId}}" t routerLinkActive="active" > Film Numero - {{filmId}}</a>
-   </ul>
-</h4>
-<h4 *ngIf=" starshipsUrl" class="text-ellipsis">
-   <ul class="col-sm-3" *ngFor="let startshipId of starshipsUrl; let i = index">
-      <a routerLink="/vaisseau/{{startshipId}}"  routerLinkActive="active" > Vaisseau Numéro - {{startshipId}}</a>
-   </ul>
-</h4>
+<div class="card text-center">
+   <div class="card-header">
+      {{pilote.name}}
+   </div>
+   <div class="card-body">
+     <h5 class="card-title">Special title treatment</h5>
+     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+   <div class="card-footer text-muted">
+      <ul class="col-sm-3" *ngFor="let startshipId of starshipsUrl; let i = index">
+         <a routerLink="/vaisseau/{{startshipId}}"  routerLinkActive="active" > Vaisseau Numéro - {{startshipId}}</a>
+      </ul>
+      <br>
+      <ul class="col-sm-3" *ngFor="let filmId of filmsUrl; let i = index">
+         <a routerLink="/film/{{filmId}}" t routerLinkActive="active" > Film Numero - {{filmId}}</a>
+      </ul>
+   </div>
+ </div>
+ 
  
