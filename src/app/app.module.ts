@@ -5,7 +5,6 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContainerComponent } from './components/container/container.component';
@@ -14,9 +13,24 @@ import { environment } from '../environments/environment';
 import { FileHandlerComponent } from './components/file-handler/file-handler.component';
 import { VaisseauxComponent } from './pages/vaisseaux/vaisseaux.component';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { VaisseauCardComponent } from './components/vaisseau-card/vaisseau-card.component';
 import { HttpClientModule } from '@angular/common/http';
-import { PiloteComponent } from './pages/pilote/pilote.component';
+import { FilmComponent } from './components/film/film.component';
+import { PlanetComponent } from './components/planet/planet.component';
+import { SpecieComponent } from './components/specie/specie.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { VaisseauCardComponent } from './components/card/vaisseau-card/vaisseau-card.component';
+import { PiloteComponent } from './components/pilote/pilote.component';
+import { VehicleComponent } from './components/vehicle/vehicle.component';
+import { VaisseauComponent } from './components/vaisseau/vaisseau.component';
+import { PlanetsComponent } from './pages/planets/planets.component';
+import { FilmsComponent } from './pages/films/films.component';
+import { SpeciesComponent } from './pages/species/species.component';
+import { PeoplesComponent } from './pages/peoples/peoples.component';
+import { PlanetCardComponent } from './components/card/planet-card/planet-card.component';
+import { SpecieCardComponent } from './components/card/specie-card/specie-card.component';
+import { FilmCardComponent } from './components/card/film-card/film-card.component';
+import { VehicleCardComponent } from './components/card/vehicle-card/vehicle-card.component';
+import { PeopleCardComponent } from './components/card/people-card/people-card.component';
 
 
 @NgModule({
@@ -29,6 +43,20 @@ import { PiloteComponent } from './pages/pilote/pilote.component';
     VaisseauxComponent,
     PiloteComponent,
     VaisseauCardComponent,
+    FilmComponent,
+    PlanetComponent,
+    SpecieComponent,
+    VehicleComponent,
+    VaisseauComponent,
+    PlanetsComponent,
+    FilmsComponent,
+    SpeciesComponent,
+    PeoplesComponent,
+    PlanetCardComponent,
+    SpecieCardComponent,
+    FilmCardComponent,
+    VehicleCardComponent,
+    PeopleCardComponent,
   ],
   imports: [
     BrowserModule,

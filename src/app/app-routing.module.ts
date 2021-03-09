@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PiloteComponent } from './pages/pilote/pilote.component';
+import { FilmComponent } from './components/film/film.component';
+import { PiloteComponent } from './components/pilote/pilote.component';
 import { VaisseauxComponent } from './pages/vaisseaux/vaisseaux.component';
 
 const routes: Routes = [
     { path: '', component: VaisseauxComponent},
     { path: 'piloteDetails/:id', component: PiloteComponent},
+    { path: 'film/:id', component: FilmComponent},
 ];
 
 @NgModule({

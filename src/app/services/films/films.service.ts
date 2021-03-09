@@ -23,6 +23,7 @@ export class FilmsService {
   }
 
   getFilmsDetails(url:string) :Observable<any>{
+    console.log(url);
     return this.http.get<Res>(url)
       .pipe(
         catchError(this.handleError('erreur', []))

@@ -12,10 +12,13 @@ export class VaisseauCardComponent implements OnInit {
   
   @Input()
   vaisseau: Vaisseau; 
+
   @Input()
   id: number;
+  
   @Input()
   vaisseauList: [];
+
   pilotes: People[];
   pilotesUrl: [];
 
@@ -24,9 +27,7 @@ export class VaisseauCardComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.pilotesUrl =this.vaisseau.pilots
-    console.log(""+this.id);
-    console.log(this.pilotesUrl);
+    this.pilotesUrl =this.vaisseau.pilots;
     if(this.pilotes){
        for(let i = 0; i< this.pilotes.length; i++){
            console.log(this.pilotes[i]);
@@ -35,8 +36,6 @@ export class VaisseauCardComponent implements OnInit {
            });
          }
        }
-       console.log("LALA");
-       console.log(this.pilotes);
    }
 
   
