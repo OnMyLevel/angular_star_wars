@@ -1,4 +1,4 @@
-# binocular-angular
+# API START WARS
 
 ### Project install
 
@@ -11,14 +11,6 @@ npm install
 
 ```
  ng serve
-```
-
----
-
-### Compiles and minifies for production
-
-```bash
- ng build --prod 
 ```
 
 ---

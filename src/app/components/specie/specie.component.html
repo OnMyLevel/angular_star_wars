@@ -3,8 +3,8 @@
    <img class="card-img-top" src="../../../assets/images/species.jpeg" alt="Card image cap">
    <h1 class="card-header">{{specie.name}}</h1>
    <div class="card-body">
-     <h5 class="card-title">Special title treatment</h5>
-     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+     <h5 class="card-title">{{specie.classification}}</h5>
+     <p class="card-text">Language : {{specie.language}}</p>
      <hr>
       <ul class="col-sm-3" *ngFor="let filmId of filmsUrl; let i = index">
           <a routerLink="/film/{{filmId}}" t routerLinkActive="active" > Moovie -{{filmId}}</a>
