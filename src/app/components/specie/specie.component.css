@@ -1,5 +1,11 @@
 ul {
 	display: inline !important;
 	list-style: none !important; 
-	margin: 1px !important;
+	margin: 0px !important;
+}
+
+a{
+    text-decoration: none !important;
+	font-size: 13px !important;
+	color:red;
 }

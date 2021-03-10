@@ -4,8 +4,10 @@
       <img class="card-img-top" src="../.././../assets/images/star-wars-x-wing-minimalism-ship-in-a-bottle-wallpaper-preview.jpg" alt="Card image cap">
       <div class="card-body">
         <h1 *ngIf="vaisseau">{{vaisseau.name}}</h1>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <p *ngIf=" vaisseau.MGLT != 'unknown'" class="card-text"> MGLT: {{vaisseau.MGLT}}</p>
+        <p class="card-text"> Capacity : {{vaisseau.cargo_capacity}}</p>
+        <p class="card-text"> Cost : {{vaisseau.cost_in_credits}}</p>
+        <p class="card-text"><small class="text-muted">{{vaisseau.edited}}</small></p>
       </div>
       <h4 *ngIf="filmsUrl" class="text-ellipsis">
          <ul class="col-sm-3" *ngFor="let filmId of filmsUrl; let i = index">

@@ -2,34 +2,27 @@
 <div class="card mb-3">
    <img class="card-img-top" src="../../../assets/images/star-wars-22.jpg" alt="Card image cap">
    <div class="card-body">
-     <h5 class="card-title">{{film.title}}</h5>
-     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+     <h1 class="card-title">{{film.title}}</h1>
+     <p class="card-text">{{film.opening_crawl}}</p>
+     <p class="card-text"><small class="text-muted">{{film.edited | date:'MMM d, y, h:mm:ss a'}}</small></p>
    </div>
  </div>
-<h4 *ngIf="peoplesUrl" class="text-ellipsis">
-    <ul class="col-sm-3" *ngFor="let peopleId of peoplesUrl; let i = index">
-        <a routerLink="/people/{{peopleId}}" routerLinkActive="active" > P-{{peopleId}}</a>
-     </ul>
-  </h4>
-  <h4 *ngIf="starshipsUrl" class="text-ellipsis">
+ <ul class="col-sm-3" *ngFor="let peopleId of peoplesUrl; let i = index">
+   <a routerLink="/people/{{peopleId}}" routerLinkActive="active" > Pilot-{{peopleId}}</a>
+</ul>
      <ul class="col-sm-3" *ngFor="let startshipId of starshipsUrl; let i = index">
-        <a routerLink="/vaisseau/{{startshipId}}"  routerLinkActive="active" > S- {{startshipId}}</a>
+        <a routerLink="/vaisseau/{{startshipId}}"  routerLinkActive="active" > Startship- {{startshipId}}</a>
      </ul>
-  </h4>
-  <h4 *ngIf="vehiclesUrl" class="text-ellipsis">
+<hr>
     <ul class="col-sm-3" *ngFor="let vehicleId of vehiclesUrl; let i = index">
-       <a routerLink="/vehicle/{{vehicleId}}"  routerLinkActive="active" > V-{{vehicleId}}</a>
+       <a routerLink="/vehicle/{{vehicleId}}"  routerLinkActive="active" > Vehicle-{{vehicleId}}</a>
     </ul>
-   </h4>
- <h4 *ngIf="speciesUrl" class="text-ellipsis">
+<hr>
    <ul class="col-sm-3" *ngFor="let specieId of speciesUrl; let i = index">
-      <a routerLink="/specie/{{specieId}}"  routerLinkActive="active" > S-{{specieId}}</a>
+      <a routerLink="/specie/{{specieId}}"  routerLinkActive="active" > Specie-{{specieId}}</a>
    </ul>
-</h4>
- <h4 *ngIf="planetsUrl" class="text-ellipsis">
+<hr>
    <ul class="col-sm-3" *ngFor="let planetId of planetsUrl; let i = index">
-      <a routerLink="/planet/{{planetId}}"  routerLinkActive="active" > P-{{planetId}}</a>
+      <a routerLink="/planet/{{planetId}}"  routerLinkActive="active" > Planet-{{planetId}}</a>
    </ul>
-</h4>
 </div>
