@@ -1,21 +1,23 @@
+<div class="container align center">
 <div class="card text-center">
+   <img class="card-img-top" src="../../../assets/./images/./banner_character.jpg" alt="Card image cap">
    <div class="card-header">
-      {{pilote.name}}
+      <h1>{{pilote.name}}</h1>
    </div>
    <div class="card-body">
-     <h5 class="card-title">Special title treatment</h5>
-     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-     <a href="#" class="btn btn-primary">Go somewhere</a>
+     <h5 class="card-title">{{pilote.gender}}</h5>
+     <p class="card-text">{{pilote.hair_color}}</p>
    </div>
    <div class="card-footer text-muted">
       <ul class="col-sm-3" *ngFor="let startshipId of starshipsUrl; let i = index">
-         <a routerLink="/vaisseau/{{startshipId}}"  routerLinkActive="active" > Vaisseau Numéro - {{startshipId}}</a>
+         <a routerLink="/vaisseau/{{startshipId}}"  routerLinkActive="active" > Starships - {{startshipId}}</a>
       </ul>
       <br>
       <ul class="col-sm-3" *ngFor="let filmId of filmsUrl; let i = index">
-         <a routerLink="/film/{{filmId}}" t routerLinkActive="active" > Film Numero - {{filmId}}</a>
+         <a routerLink="/film/{{filmId}}" t routerLinkActive="active" > Moovie - {{filmId}}</a>
       </ul>
    </div>
  </div>
+</div>
  
  

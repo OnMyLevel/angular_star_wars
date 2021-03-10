@@ -1,11 +1,14 @@
-<div class="col-md-12">
+<div class="container align center">
+<div class="align-center col-md-12">
 <br>
 <div class="row">
       <div class="col-xs-12 col-sm-8 col-md-9 col-lg-10">      
       <div *ngIf="vaisseauList" class="row is-flex">
         <div class="col-sm-3" *ngFor="let vaisseau of vaisseauList; let i = index">
+          <br>
           <app-vaisseau-card [id]="i" [vaisseau]="vaisseau"></app-vaisseau-card>
         </div>
       </div>
     </div>
+</div>
 </div>

@@ -1,19 +1,27 @@
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 14rem;">
+  
   <img class="card-img-top" src="../../../../assets/images/vaisseau.jpg" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">{{vaisseau.name}}</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h1 class="card-title">{{vaisseau.name}}</h1>
+    <p class="card-text">
+      <label>Classe: </label> {{vaisseau.starship_class}}
+      <br>
+      <label> Manufactur: </label> {{vaisseau.manufacturer}}
+    </p>
   </div>
+
   <ul class="list-group list-group-flush">
     <ul class="col-sm-6" *ngFor="let pilote of pilotesUrl; let i = index">
-      <a routerLink="/people/{{pilote}}" routerLinkActive="active" > P{{pilote}}</a>
+      <a routerLink="/people/{{pilote}}" routerLinkActive="active" > Pilot - {{pilote}} </a>
    </ul>
   </ul>
-  <div class="card-body">
+
+  <div *ngIf="filmsUrl" class="card-body">
     <ul class="col-sm-6" *ngFor="let film of filmsUrl; let i = index">
-      <a routerLink="/film/{{film}}" routerLinkActive="active" > F-{{film}}</a>
+      <a routerLink="/film/{{film}}" routerLinkActive="active" > Moovie - {{film}} </a>
    </ul>
   </div>
+
 </div>
 
 

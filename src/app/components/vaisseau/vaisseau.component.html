@@ -1,15 +1,20 @@
 <div class="container align center">
-<p>vaisseau works!</p>
-<h1 *ngIf="vaisseau">{{vaisseau.name}}</h1>
-
-<h4 *ngIf="filmsUrl" class="text-ellipsis">
-    <ul class="col-sm-3" *ngFor="let filmId of filmsUrl; let i = index">
-        <a routerLink="/film/{{filmId}}" t routerLinkActive="active" > Film Numéro - {{filmId}}</a>
-     </ul>
-  </h4>
-  <h4 *ngIf="peoplesUrl" class="text-ellipsis">
-     <ul class="col-sm-3" *ngFor="let peopleId of peoplesUrl; let i = index">
-        <a routerLink="/people/{{peopleId}}"  routerLinkActive="active" > People number - {{peopleId}}</a>
-     </ul>
-  </h4>
 <div>
+   <div class="card mb-3">
+      <img class="card-img-top" src="../.././../assets/images/star-wars-x-wing-minimalism-ship-in-a-bottle-wallpaper-preview.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h1 *ngIf="vaisseau">{{vaisseau.name}}</h1>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+      <h4 *ngIf="filmsUrl" class="text-ellipsis">
+         <ul class="col-sm-3" *ngFor="let filmId of filmsUrl; let i = index">
+             <a routerLink="/film/{{filmId}}" t routerLinkActive="active" > Moovie - {{filmId}}</a>
+          </ul>
+       </h4>
+       <h4 *ngIf="peoplesUrl" class="text-ellipsis">
+          <ul class="col-sm-3" *ngFor="let peopleId of peoplesUrl; let i = index">
+             <a routerLink="/people/{{peopleId}}"  routerLinkActive="active" > Pilot - {{peopleId}}</a>
+          </ul>
+       </h4>
+    </div>

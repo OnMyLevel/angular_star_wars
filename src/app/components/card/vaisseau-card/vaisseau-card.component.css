@@ -7,3 +7,11 @@ ul {
 	list-style: none !important; 
 	margin: 0.1px !important;
 }
+
+a{
+    text-decoration: none !important;
+	font-size: 10px !important;
+	color:red;
+}
+  
+

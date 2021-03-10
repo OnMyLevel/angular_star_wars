@@ -3,3 +3,9 @@ ul {
 	list-style: none !important; 
 	margin: 1px !important;
 }
+
+a{
+    text-decoration: none !important;
+	font-size: 12px !important;
+	color:red;
+}
